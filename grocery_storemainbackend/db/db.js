@@ -1,0 +1,71 @@
+
+// const { MongoClient, ServerApiVersion } = require('mongodb');
+// // const uri = // "mongodb+srv://prateekvajpai1854:y77WEtuVAbkxePre@cluster0.47zqx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+// const User = require('./models/userModels')
+
+// const client = new MongoClient(uri, {
+//      serverApi: {
+//     version: ServerApiVersion.v1,
+//     strict: true,
+//     deprecationErrors: true,
+//   }
+// });
+
+// async function run() {
+//   try {
+//     // Connect the client to the server	(optional starting in v4.7)
+//     await client.connect();
+//     // Send a ping to confirm a successful connection
+//     await client.db("admin").command({ ping: 1 });
+//     console.log("Pinged your deployment. You successfully connected to MongoDB!");
+//   } finally {
+//     // Ensures that the client will close when you finish/error
+//     await client.close();
+//   }
+// }
+// run().catch(console.dir);
+
+
+
+
+
+
+
+
+const mongoose = require('mongoose');
+
+// const uri =  "mongodb+srv://prateekvajpai1854:y77WEtuVAbkxePre@cluster0.47zqx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+const  uri = "mongodb+srv://prateekvajpai1854:8nUGYUlGZMYU1axb@usertesting.3cuol.mongodb.net/?retryWrites=true&w=majority&appName=usertesting"
+
+// mongoose.connect(uri);      
+
+
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+   .then(() => console.log("MongoDB connected!"))
+   .catch(err => console.error("Connection error", err));
+
+
+const User = require('./models/userModels')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
